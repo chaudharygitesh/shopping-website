@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="info.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Pin-Code</span>
+            <input type="number" placeholder="Enter your pincode" required maxlength="6" minlength="6">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="number" placeholder="Enter your number" required maxlength="10" minlength="10">
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter your Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Landmark</span>
+            <input type="text" placeholder="Enter your Landmark" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value="1">
+          <input type="radio" name="gender" id="dot-2" value="2">
+          <input type="radio" name="gender" id="dot-3" value="3">
+          <span class="gender-title">Select your Payment Method</span>
+          <div class="category">
+          <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">UPI</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Cash On Delivery</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Debit Card</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input onclick="sd()" type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+    function sd(){
+      var x = document.getElementById("dot-1").checked;
+      var y = document.getElementById("dot-2").checked;
+      var z = document.getElementById("dot-3").checked;
+        if (x==true) {
+          window.open("../UPI/UPI.html");
+        }
+        else if (y == true) {
+          window.open("../thanku page/thanku page.html");
+        }
+        else if(z == true) {
+          window.open("../Debit Card/debitcard.html");
+        }
+    }
+</script>
+</body>
+</html>
